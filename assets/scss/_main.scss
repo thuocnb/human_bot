@@ -1,0 +1,119 @@
+main {
+  overflow: hidden;
+}
+
+.box-home-template {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .4s all !important;
+  //cursor: url("../images/cursor.png"), auto;
+
+  &.active {
+    opacity: 0;
+    pointer-events: none;
+  }
+  @media (max-width: 767px) {
+    padding: 0 24px;
+  }
+  .avr {
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.content-home-cover {
+  position: relative;
+  z-index: 2;
+  .desc {
+    max-width: 635px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  .title-cover {
+    margin-bottom: 32px;
+    @media (max-width: 767px) {
+      margin-bottom: 24px;
+    }
+    img {
+      max-height: 52vh;
+      @media (max-width: 1023px) {
+        max-width: 80vw;
+      }
+    }
+  }
+}
+
+.video-template {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: .4s all !important;
+  pointer-events: none;
+  opacity: 0;
+  &.active {
+    opacity: 1;
+    pointer-events: unset;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.cursor {
+  width: 180px;
+  height: 180px;
+  background: url("../images/cursor.png") no-repeat center;
+  background-size: 100% 100%;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 3;
+  margin-left: -90px;
+  margin-top: -90px;
+  pointer-events: none;
+  @media (max-width: 1023px) {
+    display: none !important;
+  }
+}
+
+.hver-cursor {
+  position: fixed;
+  top: 92px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 92px);
+  z-index: 3;
+}
+
+.play-video {
+  @media (max-width: 1023px) {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  svg {
+    width: 60px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+  }
+}

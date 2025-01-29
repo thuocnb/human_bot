@@ -1,0 +1,94 @@
+.header-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  padding: 24px;
+  @media (max-width: 1200px) {
+    padding: 16px;
+  }
+  @media (max-width: 767px) {
+    padding: 16px 0;
+  }
+  .content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 767px) {
+      display: block;
+      text-align: center;
+    }
+    .logo {
+      @media (max-width: 767px) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    @media (max-width: 767px) {
+      justify-content: center;
+    }
+    li {
+      margin-right: 16px;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px;
+        border-radius: 40px;
+        background: #171717;
+        color: #fff;
+        font-weight: 500;
+        @media (max-width: 767px) {
+          padding: 6px 10px;
+        }
+        &:hover {
+          color: #010101;
+          background: #fff;
+          svg {
+            filter: brightness(0);
+            -webkit-filter: brightness(0);
+          }
+        }
+        svg {
+          margin-right: 8px;
+          filter: brightness(0) invert(1);
+          -webkit-filter: brightness(0) invert(1);
+          @media (max-width: 767px) {
+            margin-right: 4px;
+            width: 14px;
+            height: auto;
+            position: relative;
+            top: -1px;
+          }
+        }
+        &.launch-app {
+          color: #0A0A0A;
+          padding: 16px 32px;
+          background: radial-gradient(85.2% 224.04% at 12.26% 0%, #FCCA84 0%, #F7A0D4 39.69%, #8CECFF 100%);
+          @media (max-width: 767px) {
+            padding: 6px 10px;
+          }
+          svg {
+            filter: brightness(0);
+            -webkit-filter: brightness(0);
+            margin-left: 12px;
+            @media (max-width: 767px) {
+              margin-left: 6px;
+              position: relative;
+              top: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
